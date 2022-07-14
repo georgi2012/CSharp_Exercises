@@ -20,30 +20,30 @@ namespace Agency.Core.Factories
                 return instanceHolder;
             }
         }
-        
+
         public IBus CreateBus(int passengerCapacity, decimal pricePerKilometer)
         {
-            throw new NotImplementedException("You are invoking a AgencyFactory method that is not yet implemented!");
+            return new Bus(passengerCapacity, pricePerKilometer);
         }
 
         public IAirplane CreateAirplane(int passengerCapacity, decimal pricePerKilometer, bool hasFreeFood)
         {
-            throw new NotImplementedException("You are invoking a AgencyFactory method that is not yet implemented!");
+            return new Airplane(passengerCapacity, pricePerKilometer, hasFreeFood);
         }
 
         public ITrain CreateTrain(int passengerCapacity, decimal pricePerKilometer, int carts)
         {
-            throw new NotImplementedException("You are invoking a AgencyFactory method that is not yet implemented!");
+            return new Train(passengerCapacity, carts, pricePerKilometer);
         }
-        
+
         public IJourney CreateJourney(string startLocation, string destination, int distance, IVehicle vehicle)
         {
-            throw new NotImplementedException("You are invoking a AgencyFactory method that is not yet implemented!");
+            return new Journey(destination, distance, startLocation, vehicle);
         }
 
         public ITicket CreateTicket(IJourney journey, decimal administrativeCosts)
         {
-            throw new NotImplementedException("You are invoking a AgencyFactory method that is not yet implemented!");
+            return new Ticket(administrativeCosts, journey);
         }
     }
 }

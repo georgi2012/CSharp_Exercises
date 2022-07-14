@@ -12,5 +12,7 @@ namespace Agency.Core.Contracts
         IJourney CreateJourney(string startingLocation, string destination, int distance, IVehicle vehicle);
 
         ITicket CreateTicket(IJourney journey, decimal administrativeCosts);
+
+        IAirplane CreateAirplane(int passengerCapacity, decimal pricePerKilometer, bool hasFreeFood);
     }
 }
